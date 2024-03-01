@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 icon.remove();
                 currentIcon = null;
             });
-        }, 10);
+        }, 0);
     }
 
     document.addEventListener("keydown", (e) => {
