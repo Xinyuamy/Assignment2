@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  /* Use flexbox layout */
+  justify-content: center;
+  /* Align the flex items in the center horizontally */
+  flex-direction: column;
+  /* Stack elements vertically */
+  align-items: center;
+  /* Align the flex items in the center vertically */
+  height: 100vh;
+  /* Full height of the viewport */
+  margin: 0;
+  /* Remove default margin */
+}
+
+#container {
+  display: flex;
+  /* Use flexbox layout for the container */
+  align-items: center;
+  /* Center items vertically within the container */
+  justify-content: center;
+  /* Center items horizontally within the container */
+}
+
+#speaker-icon {
+  cursor: pointer;
+  /* Change mouse cursor to pointer when hovering */
+  margin-left: 10px;
+  /* Space to the left */
+  font-size: 30px;
+  /* Size of the speaker icon */
+}
+
+#volume {
+  margin-left: 10px;
+  /* Space to the left for consistency */
+  font-size: 30px;
+  /* Text size of the volume indicator */
+}
+
+#instruction-text {
+  text-align: center;
+  /* Center-align the instruction text */
+  margin-top: 20px;
+  /* Space above the instruction text */
+  font-size: 24px;
+  /* Size of the instruction text */
+}
+
+#icon-container {
+  display: none;
+  /* Initially hidden */
+  width: 180px;
+  /* Width of the icon container */
+  height: 30px;
+  /* Height of the icon container */
+  margin: 0 10px;
+  /* Vertical margins 0, horizontal margins 10px */
+  background-size: contain;
+  /* Ensure background image is contained within the div */
+  background-image: url("https://github.com/Xinyuamy/img/blob/main/speaker-icon-2.png?raw=true");
+  /* Background image URL */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+}
+
+.icon {
+  position: absolute;
+  /* Position absolutely within its positioned ancestor */
+  width: 30px;
+  /* Width of the icon */
+  height: 30px;
+  /* Height of the icon */
+  background-color: rgb(127, 214, 255);
+  /* Background color of the icon */
+  border-radius: 20px;
+  /* Rounded corners for the icon */
+  text-align: center;
+  /* Center text within the icon */
+  line-height: 30px;
+  /* Align text vertically within the icon */
+}
+
+@keyframes slideAndFade {
+  0% {
+    transform: translateX(0);
+    /* Start position */
+    opacity: 1;
+    /* Fully visible */
+  }
+
+  100% {
+    transform: translateX(160px);
+    /* End position, moving horizontally */
+    opacity: 0;
+    /* Fully transparent */
+  }
+}
+
+.hide {
+  animation: slideAndFade 1s forwards;
+  /* Apply the slide and fade animation */
+}
